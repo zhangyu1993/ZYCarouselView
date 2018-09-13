@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0FB4E5214A892900A81817 /* ZYCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FB4E4214A892900A81817 /* ZYCarouselView.swift */; };
 		2A452BF4214A632300FBA7AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A452BF3214A632300FBA7AD /* AppDelegate.swift */; };
 		2A452BF6214A632300FBA7AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A452BF5214A632300FBA7AD /* ViewController.swift */; };
 		2A452BF9214A632300FBA7AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A452BF7214A632300FBA7AD /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A0FB4E4214A892900A81817 /* ZYCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZYCarouselView.swift; path = ../../Source/ZYCarouselView.swift; sourceTree = "<group>"; };
 		2A452BF0214A632300FBA7AD /* ZYCarouselView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYCarouselView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A452BF3214A632300FBA7AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A452BF5214A632300FBA7AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		2A452BF2214A632300FBA7AD /* ZYCarouselView */ = {
 			isa = PBXGroup;
 			children = (
+				2A0FB4E4214A892900A81817 /* ZYCarouselView.swift */,
 				2A452BF3214A632300FBA7AD /* AppDelegate.swift */,
 				2A452BF5214A632300FBA7AD /* ViewController.swift */,
 				2A452BF7214A632300FBA7AD /* Main.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A452BF6214A632300FBA7AD /* ViewController.swift in Sources */,
+				2A0FB4E5214A892900A81817 /* ZYCarouselView.swift in Sources */,
 				2A452BF4214A632300FBA7AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +285,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52P572D3WP;
 				INFOPLIST_FILE = ZYCarouselView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +304,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52P572D3WP;
 				INFOPLIST_FILE = ZYCarouselView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

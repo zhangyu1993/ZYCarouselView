@@ -1,5 +1,5 @@
 //
-//  ZYCustomCarouselView.swift
+//  ZYCarouselView.swift
 //  TestCollectView
 //
 //  Created by zhangyu on 2018/9/6.
@@ -8,35 +8,35 @@
 
 import UIKit
 
-@objc protocol ZYCustomCarouselViewDelegate: AnyObject {
+@objc public protocol ZYCarouselViewDelegate: AnyObject {
     /// 选中的下标
-    @objc optional func carouselView(_ carouselView: ZYCustomCarouselView, didSelectItemAt index: Int)
+    @objc optional func carouselView(_ carouselView: ZYCarouselView, didSelectItemAt index: Int)
     /// 结束滚动时的下标
-    @objc optional func carouselView(_ carouselView: ZYCustomCarouselView, didEndScrolling index: Int)
+    @objc optional func carouselView(_ carouselView: ZYCarouselView, didEndScrolling index: Int)
 }
 
-protocol ZYCustomCarouselViewDataSource: AnyObject {
+public protocol ZYCarouselViewDataSource: AnyObject {
     /// item的数量
-    func numberOfItems(in carouselView: ZYCustomCarouselView) -> Int
+    func numberOfItems(in carouselView: ZYCarouselView) -> Int
     /// 自定义的view
-    func carouselView(_ carouselView: ZYCustomCarouselView, ViewForitemAtIndex index: Int) -> UIView
+    func carouselView(_ carouselView: ZYCarouselView, ViewForitemAtIndex index: Int) -> UIView
     /// item的大小
-    func sizeForItem(in carouselView: ZYCustomCarouselView) -> CGSize
+    func sizeForItem(in carouselView: ZYCarouselView) -> CGSize
 }
 
-class ZYCustomCarouselView: UIView, UIScrollViewDelegate {
+public class ZYCarouselView: UIView, UIScrollViewDelegate {
     /// 逻辑代理
-    weak var delegate: ZYCustomCarouselViewDelegate?
+    weak var delegate: ZYCarouselViewDelegate?
     /// 数据源代理
-    weak var dataSource: ZYCustomCarouselViewDataSource?
+    weak var dataSource: ZYCarouselViewDataSource?
     /// 当前显示的view的下标
-    var currentIndex: Int = 0
+    private var currentIndex: Int = 0
     /// 外界传入view的size
     var itemSize: CGSize = .zero
     /// 放外界传入的view的contentview numOfItems==1时只有一个 numOfItems>1时固定为5个
     var itemViews: [UIView] = []
     /// 数据源的个数
-    var numOfItems: Int = 0
+    private var numOfItems: Int = 0
     /// 最大比例
     var minScale: CGFloat = 0.95
     /// 最小比例
@@ -108,7 +108,7 @@ class ZYCustomCarouselView: UIView, UIScrollViewDelegate {
     /// 将要触摸到scrollView 时，关闭用户交互，停止定时器
     ///
     /// - Parameter scrollView: <#scrollView description#>
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         timer?.fireDate = .distantFuture
         scrollView.isUserInteractionEnabled = false
     }
@@ -118,11 +118,11 @@ class ZYCustomCarouselView: UIView, UIScrollViewDelegate {
     /// - Parameters:
     ///   - scrollView: <#scrollView description#>
     ///   - decelerate: <#decelerate description#>
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         timer?.fireDate = Date.init(timeInterval: scrollTnterval, since: Date())
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let currentOffset = CGPoint(x: itemSize.width * 2, y: 0)
         let space = scrollView.contentOffset.x - currentOffset.x
         let spaceSacleUp = (maxScale - minScale) * (abs(space) / itemSize.width) + minScale
@@ -144,7 +144,7 @@ class ZYCustomCarouselView: UIView, UIScrollViewDelegate {
     /// 已经结束滚动动画 这时候开放用户交互
     /// 调用setContentOffset方法，结束时会调用此方法
     /// - Parameter scrollView: <#scrollView description#>
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         contentScrollView.isUserInteractionEnabled = true
         scrollViewDidEndDecelerating(scrollView)
     }
@@ -152,7 +152,7 @@ class ZYCustomCarouselView: UIView, UIScrollViewDelegate {
     /// 已经结束减速  这时候开放用户交互
     ///
     /// - Parameter scrollView: <#scrollView description#>
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         scrollView.isUserInteractionEnabled = true
         let idxDif = Int(scrollView.contentOffset.x / itemSize.width) - 2
         currentIndex = currentIndex + idxDif
@@ -232,7 +232,7 @@ class ZYCustomCarouselView: UIView, UIScrollViewDelegate {
     }
     
     /// 从父视图移除时移除timer
-    override func removeFromSuperview() {
+    override public func removeFromSuperview() {
         super.removeFromSuperview()
         timer?.invalidate()
         timer = nil
@@ -242,7 +242,7 @@ class ZYCustomCarouselView: UIView, UIScrollViewDelegate {
         
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 }
