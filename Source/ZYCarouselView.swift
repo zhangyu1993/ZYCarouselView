@@ -93,6 +93,9 @@ public class ZYCarouselView: UIView, UIScrollViewDelegate {
             let itemView = dataSource?.carouselView(self, ViewForitemAtIndex: currentIndex)
             itemView?.frame = CGRect(x: 0 , y: 0, width: itemSize.width, height: itemSize.height)
             if let _ = itemView {
+                let tap = UITapGestureRecognizer(target: self, action: #selector(itemTapClick))
+                itemView!.addGestureRecognizer(tap)
+                itemView!.tag = 3
                 contentScrollView.addSubview(itemView!)
             }
         }

@@ -12,7 +12,7 @@
 		2A452BF9214A632300FBA7AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A452BF7214A632300FBA7AD /* Main.storyboard */; };
 		2A452BFB214A632400FBA7AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A452BFA214A632400FBA7AD /* Assets.xcassets */; };
 		2A452BFE214A632400FBA7AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A452BFC214A632400FBA7AD /* LaunchScreen.storyboard */; };
-		2AE8D206214A915200E9208A /* ZYCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE8D205214A915200E9208A /* ZYCarouselView.swift */; };
+		2AD9C048214A964700679376 /* ZYCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD9C047214A964700679376 /* ZYCarouselView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		2A452BFA214A632400FBA7AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A452BFD214A632400FBA7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A452BFF214A632400FBA7AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2AE8D205214A915200E9208A /* ZYCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYCarouselView.swift; sourceTree = "<group>"; };
+		2AD9C047214A964700679376 /* ZYCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYCarouselView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +40,7 @@
 		2A452BE7214A632300FBA7AD = {
 			isa = PBXGroup;
 			children = (
+				2AD9C046214A964700679376 /* Source */,
 				2A452BF2214A632300FBA7AD /* ZYCarouselView */,
 				2A452BF1214A632300FBA7AD /* Products */,
 			);
@@ -56,7 +57,6 @@
 		2A452BF2214A632300FBA7AD /* ZYCarouselView */ = {
 			isa = PBXGroup;
 			children = (
-				2AE8D205214A915200E9208A /* ZYCarouselView.swift */,
 				2A452BF3214A632300FBA7AD /* AppDelegate.swift */,
 				2A452BF5214A632300FBA7AD /* ViewController.swift */,
 				2A452BF7214A632300FBA7AD /* Main.storyboard */,
@@ -65,6 +65,15 @@
 				2A452BFF214A632400FBA7AD /* Info.plist */,
 			);
 			path = ZYCarouselView;
+			sourceTree = "<group>";
+		};
+		2AD9C046214A964700679376 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2AD9C047214A964700679376 /* ZYCarouselView.swift */,
+			);
+			name = Source;
+			path = ../Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE8D206214A915200E9208A /* ZYCarouselView.swift in Sources */,
+				2AD9C048214A964700679376 /* ZYCarouselView.swift in Sources */,
 				2A452BF6214A632300FBA7AD /* ViewController.swift in Sources */,
 				2A452BF4214A632300FBA7AD /* AppDelegate.swift in Sources */,
 			);
