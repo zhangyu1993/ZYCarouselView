@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ZYCarouselView'
-  s.version = '0.1.3'
+  s.version = '0.1.4'
   s.license = 'MIT'
   s.summary = 'CarouselView in Swift'
   s.homepage = 'https://github.com/zhangyu1993/ZYCarouselView'
