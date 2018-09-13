@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A0FB4E5214A892900A81817 /* ZYCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FB4E4214A892900A81817 /* ZYCarouselView.swift */; };
 		2A452BF4214A632300FBA7AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A452BF3214A632300FBA7AD /* AppDelegate.swift */; };
 		2A452BF6214A632300FBA7AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A452BF5214A632300FBA7AD /* ViewController.swift */; };
 		2A452BF9214A632300FBA7AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A452BF7214A632300FBA7AD /* Main.storyboard */; };
 		2A452BFB214A632400FBA7AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A452BFA214A632400FBA7AD /* Assets.xcassets */; };
 		2A452BFE214A632400FBA7AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A452BFC214A632400FBA7AD /* LaunchScreen.storyboard */; };
+		2AE8D206214A915200E9208A /* ZYCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE8D205214A915200E9208A /* ZYCarouselView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A0FB4E4214A892900A81817 /* ZYCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZYCarouselView.swift; path = ../../Source/ZYCarouselView.swift; sourceTree = "<group>"; };
 		2A452BF0214A632300FBA7AD /* ZYCarouselView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYCarouselView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A452BF3214A632300FBA7AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A452BF5214A632300FBA7AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +23,7 @@
 		2A452BFA214A632400FBA7AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A452BFD214A632400FBA7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A452BFF214A632400FBA7AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE8D205214A915200E9208A /* ZYCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYCarouselView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 		2A452BF2214A632300FBA7AD /* ZYCarouselView */ = {
 			isa = PBXGroup;
 			children = (
-				2A0FB4E4214A892900A81817 /* ZYCarouselView.swift */,
+				2AE8D205214A915200E9208A /* ZYCarouselView.swift */,
 				2A452BF3214A632300FBA7AD /* AppDelegate.swift */,
 				2A452BF5214A632300FBA7AD /* ViewController.swift */,
 				2A452BF7214A632300FBA7AD /* Main.storyboard */,
@@ -138,8 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AE8D206214A915200E9208A /* ZYCarouselView.swift in Sources */,
 				2A452BF6214A632300FBA7AD /* ViewController.swift in Sources */,
-				2A0FB4E5214A892900A81817 /* ZYCarouselView.swift in Sources */,
 				2A452BF4214A632300FBA7AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
